@@ -19,6 +19,7 @@ GRANT ALL ON DATABASE quartz to pentaho_user;
 
 begin;
 
+drop table if exists QRTZ;
 drop table if exists qrtz5_job_listeners;
 drop table if exists qrtz5_trigger_listeners;
 drop table if exists qrtz5_fired_triggers;
@@ -32,6 +33,7 @@ drop table if exists qrtz5_triggers;
 drop table if exists qrtz5_job_details;
 drop table if exists qrtz5_calendars;
 
+CREATE TABLE QRTZ ( NAME VARCHAR(200) NOT NULL, PRIMARY KEY (NAME) );
 CREATE TABLE qrtz5_job_details
   (
     JOB_NAME  VARCHAR(200) NOT NULL,
