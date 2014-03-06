@@ -57,21 +57,21 @@
     <param name="schemaObjectPrefix" value="fs_repos_"/>
     <param name="tablespace" value="jackrabbit"/>
   </FileSystem>
-
+-->
   <FileSystem class="org.apache.jackrabbit.core.fs.db.DbFileSystem">
     <param name="driver" value="org.postgresql.Driver"/>
-    <param name="url" value="jdbc:postgresql://localhost:5432/jackrabbit"/>
+    <param name="url" value="jdbc:postgresql://pentahodbprod.cmmnf5evtgoj.sa-east-1.rds.amazonaws.com:5432/jackrabbit"/>
     <param name="user" value="jcr_user"/>
-    <param name="password" value="password"/>
+    <param name="password" value="!jcrUs3r#"/>
     <param name="schema" value="postgresql"/>
     <param name="schemaObjectPrefix" value="fs_repos_"/>
   </FileSystem>
-  -->
-
+  
+<!--
   <FileSystem class="org.apache.jackrabbit.core.fs.local.LocalFileSystem">
      <param name="path" value="${rep.home}/repository"/>
   </FileSystem>
-
+-->
   <!--
     data store configuration
   -->
@@ -110,12 +110,12 @@
     <param name="tablePrefix" value=""/>
     <param name="schemaObjectPrefix" value="ds_repos_"/>
   </DataStore>
-
+-->
   <DataStore class="org.apache.jackrabbit.core.data.db.DbDataStore">
-    <param name="url" value="jdbc:postgresql://localhost:5432/jackrabbit"/>
+    <param name="url" value="jdbc:postgresql://pentahodbprod.cmmnf5evtgoj.sa-east-1.rds.amazonaws.com:5432/jackrabbit"/>
     <param name="driver" value="org.postgresql.Driver"/>
     <param name="user" value="jcr_user"/>
-    <param name="password" value="password"/>
+    <param name="password" value="!jcrUs3r#"/>
     <param name="databaseType" value="postgresql"/>
     <param name="minRecordLength" value="1024"/>
     <param name="maxConnections" value="3"/>
@@ -123,11 +123,11 @@
     <param name="tablePrefix" value=""/>
     <param name="schemaObjectPrefix" value="ds_repos_"/>
   </DataStore>
-  -->
+  
 
-
+<!--
   <DataStore class="org.apache.jackrabbit.core.data.FileDataStore"/>
-
+-->
   <!--
       security configuration
   -->
@@ -210,22 +210,22 @@
       <param name="schemaObjectPrefix" value="fs_ws_"/>
       <param name="tablespace" value="jcr_user"/>
     </FileSystem>
-
+-->
     <FileSystem class="org.apache.jackrabbit.core.fs.db.DbFileSystem">
       <param name="driver" value="org.postgresql.Driver"/>
-      <param name="url" value="jdbc:postgresql://localhost:5432/jackrabbit"/>
+      <param name="url" value="jdbc:postgresql://pentahodbprod.cmmnf5evtgoj.sa-east-1.rds.amazonaws.com:5432/jackrabbit"/>
       <param name="user" value="jcr_user"/>
-      <param name="password" value="password"/>
+      <param name="password" value="!jcrUs3r#"/>
       <param name="schema" value="postgresql"/>
       <param name="schemaObjectPrefix" value="fs_ws_"/>
     </FileSystem>
-    -->
-
+    
+ <!--
 
     <FileSystem class="org.apache.jackrabbit.core.fs.local.LocalFileSystem">
       <param name="path" value="${wsp.home}"/>
     </FileSystem>
-
+-->
 
     <!--
         persistence manager of the workspace:
@@ -257,23 +257,23 @@
       <param name="schemaObjectPrefix" value="${wsp.name}_pm_ws_"/>
       <param name="tablespace" value="jackrabbit"/>
     </PersistenceManager>
-
+ -->
     <PersistenceManager class="org.apache.jackrabbit.core.persistence.bundle.PostgreSQLPersistenceManager">
-      <param name="url" value="jdbc:postgresql://localhost:5432/jackrabbit"/>
+      <param name="url" value="jdbc:postgresql://pentahodbprod.cmmnf5evtgoj.sa-east-1.rds.amazonaws.com:5432/jackrabbit"/>
       <param name="driver" value="org.postgresql.Driver"/>
       <param name="user" value="jcr_user"/>
-      <param name="password" value="password"/>
+      <param name="password" value="!jcrUs3r#"/>
       <param name="schema" value="postgresql"/>
       <param name="schemaObjectPrefix" value="${wsp.name}_pm_ws_"/>
     </PersistenceManager>
-    -->
+   
 
-
+<!--
     <PersistenceManager class="org.apache.jackrabbit.core.persistence.pool.H2PersistenceManager">
       <param name="url" value="jdbc:h2:${wsp.home}/db"/>
       <param name="schemaObjectPrefix" value="${wsp.name}_"/>
     </PersistenceManager>
-
+ -->
     <!--
         Search index and the file system it uses.
         class: FQN of class implementing the QueryHandler interface
@@ -339,21 +339,21 @@ value="{0}/etc;org.pentaho.security.publish;jcr:read,jcr:readAccessControl,jcr:w
       <param name="schemaObjectPrefix" value="fs_ver_"/>
       <param name="tablespace" value="jackrabbit"/>
     </FileSystem>
-
+-->
     <FileSystem class="org.apache.jackrabbit.core.fs.db.DbFileSystem">
       <param name="driver" value="org.postgresql.Driver"/>
-      <param name="url" value="jdbc:postgresql://localhost:5432/jackrabbit"/>
+      <param name="url" value="jdbc:postgresql://pentahodbprod.cmmnf5evtgoj.sa-east-1.rds.amazonaws.com:5432/jackrabbit"/>
       <param name="user" value="jcr_user"/>
-      <param name="password" value="password"/>
+      <param name="password" value="!jcrUs3r#"/>
       <param name="schema" value="postgresql"/>
       <param name="schemaObjectPrefix" value="fs_ver_"/>
     </FileSystem>
-    -->
-
+    
+ <!--
     <FileSystem class="org.apache.jackrabbit.core.fs.local.LocalFileSystem">
       <param name="path" value="${rep.home}/version" />
     </FileSystem>
-
+-->
     <!--
         Configures the persistence manager to be used for persisting version state.
         Please note that the current versioning implementation is based on
@@ -386,22 +386,22 @@ value="{0}/etc;org.pentaho.security.publish;jcr:read,jcr:readAccessControl,jcr:w
       <param name="schemaObjectPrefix" value="pm_ver_"/>
       <param name="tablespace" value="jackrabbit"/>
     </PersistenceManager>
-
+-->
     <PersistenceManager class="org.apache.jackrabbit.core.persistence.bundle.PostgreSQLPersistenceManager">
-      <param name="url" value="jdbc:postgresql://localhost:5432/jackrabbit"/>
+      <param name="url" value="jdbc:postgresql://pentahodbprod.cmmnf5evtgoj.sa-east-1.rds.amazonaws.com:5432/jackrabbit"/>
       <param name="driver" value="org.postgresql.Driver"/>
       <param name="user" value="jcr_user"/>
-      <param name="password" value="password"/>
+      <param name="password" value="!jcrUs3r#"/>
       <param name="schema" value="postgresql"/>
       <param name="schemaObjectPrefix" value="pm_ver_"/>
     </PersistenceManager>
-    -->
-
+    
+<!--
     <PersistenceManager class="org.apache.jackrabbit.core.persistence.pool.H2PersistenceManager">
       <param name="url" value="jdbc:h2:${rep.home}/version/db"/>
       <param name="schemaObjectPrefix" value="version_"/>
     </PersistenceManager>
-
+-->
   </Versioning>
 
   <!--
