@@ -7,7 +7,7 @@
 drop database if exists quartz;
 drop user if exists pentaho_user;
 
-CREATE USER pentaho_user PASSWORD 'password';
+CREATE USER pentaho_user PASSWORD '!p3nt4h0Us3r#';
 
 CREATE DATABASE quartz  WITH OWNER = pentaho_user  ENCODING = 'UTF8' TABLESPACE = pg_default;
 
