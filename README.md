@@ -29,15 +29,13 @@ Procedimento
  * Referência: https://wiki.postgresql.org/wiki/YUM_Installation
  * Configuração - **  pg_hba.conf ** 
 <pre>
-  sudo vim /var/lib/pgsql/9.3/data/pg_hba.conf
-  ** Adicionar ** 
+  $ sudo vim /var/lib/pgsql/9.3/data/pg_hba.conf
   host    all             all             0.0.0.0/0               md5
 </pre>
 
  * Configuração - postgresql.conf
 <pre>
   $ sudo vim /var/lib/pgsql/9.3/data/postgresql.conf
-  ** Atualizar listen_addresses **
   listen_addresses = '*'
 </pre>
 
