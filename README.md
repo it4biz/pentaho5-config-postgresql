@@ -1,7 +1,21 @@
 Pentaho 5 CE com PostgreSQL 9.3
 ==========================
 
-Este repositório agrega todos os arquivos necessários para configuração do Pentaho CE, versão 5.0.1, com PostgreSQL.
+Este repositório agrega todos os arquivos necessários para configuração do Pentaho CE, versão 5.0.1, com PostgreSQL 9.3. 
+#### Ambiente testado ####
+<pre>
+$ cat /etc/system-release
+Amazon Linux AMI release 2013.09
+
+$ uname -a
+Linux 3.4.76-65.111.amzn1.x86_64 #1 SMP Tue Jan 14 21:06:49 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+
+$ java -version
+java version "1.7.0_51"
+
+$ psql --version
+psql (PostgreSQL) 9.3.3
+</pre>
 
 Procedimento
 --
