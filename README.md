@@ -39,7 +39,7 @@ Procedimento
 
 ### Criar usuário ###
 <pre>
-sudo useradd -s /bin/bash -d /opt/pentaho pentaho
+$ sudo useradd -s /bin/bash -d /opt/pentaho pentaho
 </pre>
 
 ###Baixar a última versão CE estável###
@@ -47,13 +47,13 @@ sudo useradd -s /bin/bash -d /opt/pentaho pentaho
  * https://sourceforge.net/projects/pentaho/files/Business%20Intelligence%20Server/5.0.1-stable/
 
 <pre>
-sudo su - pentaho
-wget 'http://downloads.sourceforge.net/project/pentaho/Business%20Intelligence%20Server/5.0.1-stable/biserver-ce-5.0.1-stable.zip?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fpentaho%2Ffiles%2FBusiness%2520Intelligence%2520Server%2F5.0.1-stable%2F&ts=1394208071&use_mirror=ufpr' -O biserver-ce-5.0.1-stable.zip
+$ sudo su - pentaho
+$ wget 'http://downloads.sourceforge.net/project/pentaho/Business%20Intelligence%20Server/5.0.1-stable/biserver-ce-5.0.1-stable.zip?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fpentaho%2Ffiles%2FBusiness%2520Intelligence%2520Server%2F5.0.1-stable%2F&ts=1394208071&use_mirror=ufpr' -O biserver-ce-5.0.1-stable.zip
 </pre>
 
 ### Descompactar Pentaho ###
 <pre>
-unzip biserver-ce-5.0.1-stable.zip
+$ unzip biserver-ce-5.0.1-stable.zip
 </pre>
 
 ### Inicializar repositório ###
@@ -61,16 +61,19 @@ unzip biserver-ce-5.0.1-stable.zip
 
 ### Baixar configurações predefinidas ###
 <pre>
-   git clone https://github.com/wmarinho/pentaho5-config-postgresql.git
+   $ git clone https://github.com/wmarinho/pentaho5-config-postgresql.git
 </pre>
 
 ### Aplicar configurações ###
 
 <pre>
-  cp -r pentaho5-config-postgresql/biserver-ce .
+  $ cp -r pentaho5-config-postgresql/biserver-ce .
 </pre>
 
 ### Inicializar repositório ###
+
+Usuários e senhas estão predefinidos nos arquivos *.sql. 
+Para utilizar em produção, é recomendável a alteração em todos os arquivos. Segue um comando simples que pode ajudar
 
 <pre>
   cd pentaho5-config-postgresql/biserver-ce/data/postgresql
@@ -79,9 +82,6 @@ unzip biserver-ce-5.0.1-stable.zip
   psql -U postgres -h localhost < create_jcr_postgresql.sql
 </pre>
 
-Usuários e senhas estão predefinidos nos arquivos *.sql. 
-
-Para utilizar em produção, é recomendável a alteração em todos os arquivos. Segue um comando simples que pode ajudar
 
 <pre>
   cd pentaho5-config-postgresql
