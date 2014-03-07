@@ -89,3 +89,10 @@ Para utilizar em produção, é recomendável a alteração em todos os arquivos
   $ grep -Rn '!h1bUs3r#' *
   $ grep -Rn '!p3nt4h0Us3r#' *
 </pre>
+
+
+### Inicializar Pentaho ###
+<pre>
+  $ cd /opt/pentaho/biserver-ce
+  $ ./start-pentaho.sh
+</pre>
