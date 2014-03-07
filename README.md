@@ -27,9 +27,9 @@ Procedimento
 ###Instalação do PostgreSQL Local###
 
  * Referência: https://wiki.postgresql.org/wiki/YUM_Installation
- * Configuração - pg\_hba.conf  
+ * Configuração - <code>pg_hba.conf</code>
 <pre>
-  $ sudo vim /var/lib/pgsql/9.3/data/pg\_hba.conf
+  $ sudo vim <code>/var/lib/pgsql/9.3/data/pg_hba.conf</code>
   host    all             all             0.0.0.0/0               md5
 </pre>
 
