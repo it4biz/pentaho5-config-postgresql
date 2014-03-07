@@ -75,7 +75,7 @@ $ unzip biserver-ce-5.0.1-stable.zip
 ### Inicializar repositório ###
 
 Usuários e senhas estão predefinidos nos arquivos *.sql. 
-Para utilizar em produção, é recomendável a alteração em todos os arquivos. Segue um comando simples que pode ajudar.
+Para utilizar em produção, é recomendável a alteração em todos os arquivos. 
 
 <pre>
   $ cd pentaho5-config-postgresql/biserver-ce/data/postgresql
@@ -84,12 +84,16 @@ Para utilizar em produção, é recomendável a alteração em todos os arquivos
   $ psql -U postgres -h localhost < create_jcr_postgresql.sql
 </pre>
 
+### Comandos úteis ###
 
 <pre>
   $ cd pentaho5-config-postgresql
   $ grep -Rn '!jcrUs3r#' *
   $ grep -Rn '!h1bUs3r#' *
   $ grep -Rn '!p3nt4h0Us3r#' *
+  $ grep -Rn 'localhost:5432' *
+  $ sed -i 's/localhost:5432/psqlserver.com:5432/' biserver-ce/tomcat/webapps/pentaho/META-INF/context.xml
+  
 </pre>
 
 
