@@ -1,2 +1,3 @@
-pentaho5-config-postgresql
+Pentaho 5 CE com PostgreSQL
 ==========================
+
