@@ -79,7 +79,9 @@ unzip biserver-ce-5.0.1-stable.zip
   psql -U postgres -h localhost < create_jcr_postgresql.sql
 </pre>
 
-Usuários e senhas estão predefinidos nos arquivos *.sql. Para utilizar em produção, é recomendável a alteração em todos os arquivos. Segue um comando simples que pode ajudar
+Usuários e senhas estão predefinidos nos arquivos *.sql. 
+
+Para utilizar em produção, é recomendável a alteração em todos os arquivos. Segue um comando simples que pode ajudar
 
 <pre>
   cd pentaho5-config-postgresql
